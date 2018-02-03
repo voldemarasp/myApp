@@ -81,4 +81,10 @@
     <plugin name="cordova-plugin-splashscreen" spec="^5.0.2" />
     <plugin name="cordova-plugin-ionic-webview" spec="^1.1.16" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
+    <plugin name="cordova-plugin-file-transfer" spec="^1.7.1" />
+    <plugin name="cordova-plugin-zip" spec="^3.1.0" />
+    <plugin name="cordova-plugin-code-push" spec="^1.11.3" />
+    <allow-navigation href="http://192.168.0.113:8100" />
+    <engine name="android" spec="7.0.0" />
+    <engine name="ios" spec="^4.5.4" />
 </widget>
