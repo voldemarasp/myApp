@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -7,6 +9,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { TaisyklesPage } from '../pages/taisykles/taisykles';
+import { SubmitProvider } from '../providers/submit/submit';
+
 
 @NgModule({
   declarations: [
@@ -16,6 +20,7 @@ import { TaisyklesPage } from '../pages/taisykles/taisykles';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule, 
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -27,7 +32,8 @@ import { TaisyklesPage } from '../pages/taisykles/taisykles';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    SubmitProvider
   ]
 })
 export class AppModule {}
