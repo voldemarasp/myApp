@@ -9,7 +9,7 @@ import { SubmitProvider } from '../../providers/submit/submit';
     TaisyklesPage,
   ],
   imports: [
-    IonicPageModule.forChild(TaisyklesPage),
+    IonicPageModule.forChild(TaisyklesPage)
   ],
   providers: [
     SubmitProvider

@@ -69,23 +69,24 @@
 				<ion-label floating>Komentarai</ion-label>
 				<ion-textarea type="text" value="" [(ngModel)]="form.comments" name="comments"></ion-textarea>
 			</ion-item>
-			<ion-list radio-group>
+			<!-- <ion-list radio-group>
 				<ion-list-header>Datos</ion-list-header>
 				
 				<ion-item *ngFor="let day of availableDays">
-					<ion-label>*ngIf({{ day.id }} -- {{ day.reisas }} -- {{ day.statusas }}</ion-label>
+					<ion-label> {{ day.id }} -- {{ day.reisas }} -- {{ day.statusas }}</ion-label>
 					<ion-radio value="{{ day.id }}"></ion-radio>
 				</ion-item>
 				
-			</ion-list>
+			</ion-list> -->
 		</ion-list>
 		
 		
 		
 		<div padding>
 			<!-- <button ion-button color="primary" (click)="formSubmit()">Sign In</button> -->
-			<button ion-button color="primary" type="submit" block>Submit</button>
+			<button type="button" ion-button block light (click)="doRadio()">Select date</button>
 		</div>
+		<button ion-button color="primary" type="submit" block>Submit</button>
 		
 	</form>
 </ion-content>
