@@ -34,9 +34,10 @@ export class TaisyklesPage {
   }
   
   formSubmit() {
-    this.sumbitProvider.sendByPost(this.form);
-    console.log(this.form);
-
+    const postDataFormat = Object.keys(this.form).map((key) => {
+      return encodeURIComponent(key) + '=' + encodeURIComponent(this.form[key]);
+    }).join('&');
+    this.sumbitProvider.sendByPost(postDataFormat);
   }
   
   getDays() {
