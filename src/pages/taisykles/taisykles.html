@@ -13,20 +13,20 @@
 </ion-header> -->
 
 <ion-content padding>
-	<form (ngSubmit)="formSubmit()">
+	<form (ngSubmit)="formSubmit()" method="post">
 		<h2 text-center>SIUNTĖJAS</h2>
 		<ion-list>
 			<ion-item>
 				<ion-label floating>Vardas Pavardė *</ion-label>
-				<ion-input type="text" value="" [(ngModel)]="form.name" name="name"></ion-input>
+				<ion-input type="text" value="" [(ngModel)]="form.subject" name="subject"></ion-input>
 			</ion-item>
 			
 			<ion-item>
 				<ion-label floating>El. paštas *</ion-label>
-				<ion-input type="email" value="" [(ngModel)]="form.email" name="email"></ion-input>
+				<ion-input type="email" value="" [(ngModel)]="form.to" name="to"></ion-input>
 			</ion-item>
 			
-			<ion-item>
+			<!-- <ion-item>
 				<ion-label floating>Telefono numeris</ion-label>
 				<ion-input type="tel" value="" [(ngModel)]="form.phone" name="phone"></ion-input>
 			</ion-item>
@@ -39,13 +39,13 @@
 			<ion-item>
 				<ion-label floating>Siuntinio svoris (kg)</ion-label>
 				<ion-input type="number" value="" min="0" [(ngModel)]="form.weight" name="weight"></ion-input>
-			</ion-item>
+			</ion-item> -->
 			
 		</ion-list>
 		
 		<h2 text-center>GAVĖJAS</h2>
 		<ion-list>
-			<ion-item>
+			<!-- <ion-item>
 				<ion-label floating>Vardas Pavardė *</ion-label>
 				<ion-input type="text" value="" [(ngModel)]="form.receiverName" name="receiverName"></ion-input>
 			</ion-item>
@@ -63,11 +63,11 @@
 			<ion-item>
 				<ion-label floating>Adresas</ion-label>
 				<ion-input type="text" value="" [(ngModel)]="form.receiverAddress" name="receiverAddress"></ion-input>
-			</ion-item>
+			</ion-item> -->
 			
 			<ion-item>
 				<ion-label floating>Komentarai</ion-label>
-				<ion-textarea type="text" value="" [(ngModel)]="form.comments" name="comments"></ion-textarea>
+				<ion-textarea type="text" value="" [(ngModel)]="form.message" name="message"></ion-textarea>
 			</ion-item>
 			<!-- <ion-list radio-group>
 				<ion-list-header>Datos</ion-list-header>
@@ -82,10 +82,10 @@
 		
 		
 		
-		<div padding>
-			<!-- <button ion-button color="primary" (click)="formSubmit()">Sign In</button> -->
+		<!-- <div padding>
 			<button type="button" ion-button block light (click)="doRadio()">Select date</button>
 		</div>
+		 -->
 		<button ion-button color="primary" type="submit" block>Submit</button>
 		
 	</form>

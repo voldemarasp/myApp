@@ -6,8 +6,7 @@ import { HttpHeaders } from '@angular/common/http';
 
 const httpOptions = {
   headers: new HttpHeaders({
-    'Content-Type': 'application/json',
-    'Authorization': 'my-auth-token'
+    'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8'
   })
 };
 
@@ -21,9 +20,10 @@ export class SubmitProvider {
   }
   
   sendByPost(forma) {
-    return this.http.post("http://httpbin.org/post", JSON.stringify(forma), httpOptions)
+    
+    return this.http.post("http://app.valdema.lt/mail/", forma, httpOptions)
     .subscribe(
-      data => console.log(data['origin']), // success path
+      data => console.log('pavyko'), // success path
       error => console.log('error') // error path
     )
   }

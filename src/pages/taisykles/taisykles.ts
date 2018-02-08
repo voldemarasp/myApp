@@ -1,16 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { SubmitProvider } from '../../providers/submit/submit';
-// import { Observable } from 'rxjs/Observable';
+
 import { AlertController } from 'ionic-angular';
 
 
-/**
-* Generated class for the TaisyklesPage page.
-*
-* See https://ionicframework.com/docs/components/#navigation for more info on
-* Ionic pages and navigation.
-*/
 
 @IonicPage()
 @Component({
@@ -60,11 +54,19 @@ export class TaisyklesPage {
       let alert = this.alertCtrl.create();
       alert.setTitle('Lightsaber color');
       
-      this.availableDays.forEach(element => {
+      this.availableDays.pirmas.forEach(element => {
         alert.addInput({
           type: 'radio',
-          label: 'Blue' + element.id ,
-          value: 'blue'
+          label: 'Pirmas ' + element.reisas + ' // '+ element.statusas,
+          value: element.reisas
+        });
+      });    
+      
+      this.availableDays.antras.forEach(element => {
+        alert.addInput({
+          type: 'radio',
+          label: 'Antras ' + element.reisas + ' // '+ element.statusas,
+          value: element.reisas
         });
       });    
       
